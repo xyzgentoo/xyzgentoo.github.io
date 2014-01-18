@@ -1,0 +1,6 @@
+markdown: rdiscount
+permalink: /:year/:month/:title/
+url: http://ilengmen.com
+author: xyzgentoo
+pygments: true
+paginate: 24
