@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="xyzgentoo" />
-    <title>留言 | xyzgentoo</title>
+    <title>MacOSX右键菜单去重 | xyzgentoo</title>
     <link href="/feed/" rel="alternate" title="xyzgentoo" type="application/atom+xml" />
     
     <link rel="stylesheet" href="/media/css/highlight.css">
@@ -25,15 +25,67 @@
           <a href="/about" class="ss-icon" title="About" >user</a>
           <a href="/feed" class="ss-icon" title="Subscribe by RSS" >rss</a>
         </div>
-        <h1>留言</h1>
+        <h1>MacOSX右键菜单去重</h1>
         </header>
         <hr>
         <article class="content">
         <section class="post">
-<p>使用评论留言哦！</p>
+<p>顺手留个记录，自己在mac上经常会碰到这个问题，右键打开方式中出现几个重复的，解决方法也很简单，主要是参考了大别的博客，具体的<a href="%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5%E5%9C%A8%E8%BF%99">文章链接在这</a></p>
+
+<p>命令如下:</p>
+
+<p>/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user</p>
+
+<hr />
+
+<p>这段代码的含义是，在本地，系统和用户空间上，重建LS数据库。</p>
+
+<p>对于 lsregister 这个命令，我也多一句嘴，介绍下它的各个参数</p>
+
+<p>-kill 重置全局LS数据库(最先执行)
+-lint 打印详细应用程序文件关联注册中的错误信息
+-convert: 将老数据库中的信息注册到新的LS数据库
+-load: 加载LS插件
+-lazy n: 指定一个注册等待时间
+-r: 递归的查找文件夹内容以做关联之用（不包括pkg类型文件和隐藏文件夹下的内容）
+-R: 递归的查找文件夹内容以做关联之用（包括pkg类型文件和隐藏文件夹下的内容）
+-f: 强制更新所有对应注册信息
+-v: 输出lsregister运行详细信息
+-dump: 在注册完成后显示数据库内容</p>
+
+<p>-h: 显示此帮助</p>
 
 </section>
+<section class="meta">
+<span class="author">
+  <a href="http://geeklu.com">xyzgentoo</a>
+</span>
+<span class="time">
+  /
+  <time datetime="2014-02-04">2014-02-04</time>
+</span>
+<br />
+<br />
+<span class="license">
+  Published 
+</span>
 
+<span class="categories">
+  in categories
+  
+  <a href="/categories/#mac" title="mac">mac</a>&nbsp;
+  
+</span>
+
+
+<span class="tags">
+  tagged with 
+  
+  <a href="/tags/#tip" title="tip">tip</a>&nbsp;
+  
+</span>
+
+</section>
 <section class="comment">
 <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -52,7 +104,24 @@
 </section>
 
 
-
+<script type="text/javascript">
+$(function(){
+  $(document).keydown(function(e) {
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = 'http://ilengmen.com/2014/02/Thoughts-about-QQMail/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        }
+        if (url) {
+            window.location = url;
+        }
+  });
+})
+</script>
 
 
         </article>
