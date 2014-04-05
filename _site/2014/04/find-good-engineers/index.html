@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="xyzgentoo" />
-    <title>MacOSX右键菜单去重 | xyzgentoo</title>
+    <title>如何挖掘优秀的工程师 | xyzgentoo</title>
     <link href="/feed/" rel="alternate" title="xyzgentoo" type="application/atom+xml" />
     
     <link rel="stylesheet" href="/media/css/highlight.css">
@@ -25,35 +25,67 @@
           <a href="/about" class="ss-icon" title="About" >user</a>
           <a href="/feed" class="ss-icon" title="Subscribe by RSS" >rss</a>
         </div>
-        <h1>MacOSX右键菜单去重</h1>
+        <h1>如何挖掘优秀的工程师</h1>
         </header>
         <hr>
         <article class="content">
         <section class="post">
-<p>顺手留个记录，自己在mac上经常会碰到这个问题，右键打开方式中出现几个重复的，解决方法也很简单，主要是参考了大别的博客，具体的<a href="%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5%E5%9C%A8%E8%BF%99">文章链接在这</a></p>
+<p>与其说挖掘优秀的工程师，不如说我说看重的工程师有哪些特性</p>
 
-<p>命令如下:</p>
+<ul>
+<li>有大局观</li>
+</ul>
 
-<p>/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user</p>
+
+<p>能够在团队或者产品需要他的时候，认真踏实的做事情，任劳任怨，跟团队一起共进退</p>
+
+<ul>
+<li>积极解决问题</li>
+</ul>
+
+
+<p>做研发，难免碰到产品需求多变，或者各种问题，优秀的工程师总是想着如何解决问题，而不是碰到问题就抱怨，不愿为了追求更高的产品质量或体验而改变已有的实现</p>
+
+<ul>
+<li>积极沟通</li>
+</ul>
+
+
+<p>俗话说，三个臭皮匠一个诸葛亮，再牛的人的产出也是有限的；当碰到问题时，或者别人碰到问题时，可以清楚的表达问题，跟大家沟通，一起解决的人，尤为重要</p>
+
+<ul>
+<li>分析解决问题的思路清晰</li>
+</ul>
+
+
+<p>问题总是有的，关键是处理的思路是否清晰，而不是乱撞乱改</p>
+
+<ul>
+<li>优先级安排合理</li>
+</ul>
+
+
+<p>做研发总会有各种各样的任务，哪些是重要的，哪些是不重要的</p>
+
+<ul>
+<li>愿意帮助别人</li>
+</ul>
+
+
+<p>这样的人不仅自己优秀，还能带动周边的人成长，对团队的价值不可限量</p>
+
+<ul>
+<li>有较好的技术能力</li>
+</ul>
+
+
+<p>这个是基础，但不是最重要的，因为技术比较容易提高，只要不是太笨，愿意投入时间和精力，技术都是能够提高的</p>
 
 <hr />
 
-<p>这段代码的含义是，在本地，系统和用户空间上，重建LS数据库。</p>
+<p>说到这，如果只是技术好，而不具备其他特性的工程师，是不堪重用的，因为他带不来任何附加值，对团队的价值也只在于他写的代码了。</p>
 
-<p>对于 lsregister 这个命令，我也多一句嘴，介绍下它的各个参数</p>
-
-<p>-kill 重置全局LS数据库(最先执行)
--lint 打印详细应用程序文件关联注册中的错误信息
--convert: 将老数据库中的信息注册到新的LS数据库
--load: 加载LS插件
--lazy n: 指定一个注册等待时间
--r: 递归的查找文件夹内容以做关联之用（不包括pkg类型文件和隐藏文件夹下的内容）
--R: 递归的查找文件夹内容以做关联之用（包括pkg类型文件和隐藏文件夹下的内容）
--f: 强制更新所有对应注册信息
--v: 输出lsregister运行详细信息
--dump: 在注册完成后显示数据库内容</p>
-
-<p>-h: 显示此帮助</p>
+<p>而这几个特性中，我最看重的是“大局观”和“积极解决问题”这两个，因为这个世界上的优秀产品，有时往往不是最聪明的人打造的，而是踏踏实实，积极解决问题，打磨产品体验，跟团队一起奋斗拼搏的人做出来的。</p>
 
 </section>
 <section class="meta">
@@ -62,7 +94,7 @@
 </span>
 <span class="time">
   /
-  <time datetime="2014-02-04">2014-02-04</time>
+  <time datetime="2014-04-05">2014-04-05</time>
 </span>
 <br />
 <br />
@@ -73,7 +105,7 @@
 <span class="categories">
   in categories
   
-  <a href="/categories/#mac" title="mac">mac</a>&nbsp;
+  <a href="/categories/#team" title="team">team</a>&nbsp;
   
 </span>
 
@@ -81,7 +113,9 @@
 <span class="tags">
   tagged with 
   
-  <a href="/tags/#tip" title="tip">tip</a>&nbsp;
+  <a href="/tags/#people" title="people">people</a>&nbsp;
+  
+  <a href="/tags/#engineer" title="engineer">engineer</a>&nbsp;
   
 </span>
 
@@ -110,12 +144,12 @@ $(function(){
     var url = false;
         if (e.which == 37 || e.which == 74) {  // Left arrow and J
             
-        url = 'http://ilengmen.com/2014/02/Thoughts-about-QQMail/';
+        url = 'http://ilengmen.com/2014/03/key-questions-before-start-a-new-project/';
         
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
-        url = 'http://ilengmen.com/2014/02/PM-manual/';
+        url = 'http://ilengmen.com/2014/04/management-or-motivation/';
         
         }
         if (url) {
